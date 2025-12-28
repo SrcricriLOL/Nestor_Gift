@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Un Alma Artesanal</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:linear-gradient(180deg,#0b0b16,#1a1a2e);
+    color:#f1f1f1;
+    overflow-x:hidden;
+}
+
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes zoomIn{
+    from{opacity:0; transform:scale(0.8);}
+    to{opacity:1; transform:scale(1);}
+}
+
+section{
+    padding:60px 20px;
+    max-width:1100px;
+    margin:auto;
+    animation:fadeUp 1.2s ease forwards;
+}
+
+
+h1,h2{
+    font-family:'Playfair Display', serif;
+    text-align:center;
+}
+
+h1{
+    font-size:clamp(2.2em,6vw,3.5em);
+}
+
+h2{
+    font-size:clamp(1.8em,5vw,2.4em);
+    margin-bottom:30px;
+}
+
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero span{
+    opacity:0.7;
+    font-style:italic;
+    margin-top:10px;
+}
+
+
+p{
+    line-height:1.8;
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+}
+
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.06);
+    border-radius:18px;
+    padding:25px;
+    backdrop-filter:blur(6px);
+    transition:transform 0.4s, background 0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+    background:rgba(255,255,255,0.12);
+}
+
+.card h3{
+    text-align:center;
+    font-family:'Playfair Display', serif;
+    margin-bottom:10px;
+}
+
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:18px;
+    animation:zoomIn 1s ease;
+    transition:transform 0.4s, filter 0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+    filter:brightness(1.15);
+}
+
+
+.quote{
+    font-size:clamp(1.2em,4vw,1.6em);
+    font-style:italic;
+    opacity:0.85;
+}
+
+
+footer{
+    text-align:center;
+    padding:30px;
+    opacity:0.6;
+    font-size:0.9em;
+}
+
+
+@media(max-width:500px){
+    .gallery img{
+        height:200px;
+    }
+}
+
+.final-message{
+    text-align:center;
+    padding:80px 25px;
+    background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0.3));
+    border-radius:30px;
+    margin-bottom:40px;
+    animation:fadeUp 1.5s ease forwards;
+}
+
+.final-message p{
+    font-size:clamp(1em,4vw,1.3em);
+    line-height:2;
+    opacity:0.9;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<audio id="musicPlayer" autoplay></audio>
+
+
+
+<section class="hero">
+    <h1>Un Alma Artesanal</h1>
+    <span>Pan con agua, música eterna y sueños dibujados</span>
+</section>
+
+
+<section>
+    <h2>Esencia</h2>
+    <p>
+        Mi mundo se construye con cosas simples:  
+        <b>pan con agua</b>, música que acompaña las noches,  
+        arte hecho a mano, poesía que se queda despierta  
+        cuando yo decido dormir un poco más.
+    </p>
+</section>
+
+
+<section>
+    <h2>Música</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Clásicos</h3>
+            <p>Julio Jaramillo<br>Alberto Cortez<br>Frank Sinatra</p>
+        </div>
+        <div class="card">
+            <h3>Actuales</h3>
+            <p>Crisaunt<br>Mac DeMarco<br>Joji</p>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <h2>Galería</h2>
+    <div class="gallery">
+        <img src="Dibujo nestor.jpg" alt="">
+        <img src="Nestor dibujo 2.jpg" alt="">
+        <img src="https://preview.redd.it/a-nice-view-from-the-mountains-v0-dya60echm57e1.png?auto=webp&s=cf12a2b4e8aa01c73e69f4c730822538c6483972" alt="">
+        <img src="https://external-preview.redd.it/DSCplTqG_eRWkjyqNfFkBsXATb4Y0BfgsBRzo66sngU.jpg?auto=webp&s=6f784d630d9485b4160348f3e48da828aa7502ac" alt="">
+    </div>
+</section>
+
+
+<section>
+    <h2>Anime</h2>
+    <div class="grid">
+        <div class="card"><h3>Monster</h3> <p>La historia se desarrolla principalmente en la Alemania de la posguerra fría y sigue al Dr. Kenzo Tenma, un brillante neurocirujano japonés. Su vida cambia drásticamente cuando decide desobedecer las órdenes de sus superiores para salvar la vida de un niño, Johan Liebert, en lugar de operar a un político influyente. </p></div>
+        <div class="card"><h3>Parasyte</h3><p>La historia sigue a Shinichi Izumi, un estudiante de secundaria cuya vida cambia cuando unos parásitos alienígenas llegan a la Tierra para controlar los cerebros humanos. Uno de estos seres intenta apoderarse de Shinichi, pero solo logra infectar su mano derecha, naciendo así una relación simbiótica con la criatura, a quien llama Migi.</p> </div>
+        <div class="card"><h3>Chainsaw Man</h3> <p>Chainsaw Man (Hombre Motosierra) es un aclamado anime de fantasía oscura y acción producido por MAPPA, basado en el manga de Tatsuki Fujimoto, que sigue a Denji, un joven pobre que, tras ser traicionado y fusionarse con su demonio motosierra, Pochita, revive como un híbrido humano-demonio para cazar demonios y buscar una vida normal.</p></div>
+    </div>
+</section>
+
+
+<section>
+    <h2>Series</h2>
+    <div class="grid">
+        <div class="card"><h3>Dexter</h3> <p>La serie Dexter es un thriller psicológico que sigue la vida de Dexter Morgan (Michael C. Hall), un analista de manchas de sangre del Departamento de Policía de Miami que lleva una doble vida como asesino en serie.</p> </div>
+        <div class="card"><h3>Breaking Bad</h3> <p>a serie sigue a Walter White (Bryan Cranston), un profesor de química sobrecalificado que, tras ser diagnosticado con cáncer de pulmón terminal, decide cocinar metanfetamina azul de alta pureza para asegurar el futuro financiero de su familia. Junto a su exalumno Jesse Pinkman (Aaron Paul), Walt desciende a un mundo de crimen, transformándose de un padre de familia desesperado en el temido capo Heisenberg. </p> </div>
+        <div class="card"><h3>The Midnight Gospel</h3> <p>La serie sigue a Clancy Gilroy, un "spacecaster" (podcaster espacial) que vive en una dimensión llamada "La Cinta Cromática". Posee un simulador de universos multiversales averiado con el que viaja a planetas al borde del apocalipsis para entrevistar a sus habitantes.</p> </div>
+    </div>
+</section>
+
+
+<section>
+    <h2>Juegos</h2>
+    <div class="grid">
+        <div class="card"><h3>99 Noches en el Bosque</h3> <p>Los jugadores aparecen en un bosque oscuro y cerrado al público debido a la desaparición de cuatro niños. El objetivo principal es sobrevivir 99 días y noches mientras intentas rescatar a los niños perdidos.</p></div>
+        <div class="card"><h3>Fortnite</h3> <p>Fortnite es un parque de atracciones virtual. Trata de sobrevivir en una isla competitiva, pero también de socializar con amigos, asistir a eventos mundiales y jugar diversos géneros (carreras, música, construcción) usando tus personajes favoritos de la cultura pop.</p></div>
+        <div class="card"><h3>Minecraft con Shaders</h3><p>Minecraft es un juego de mundo abierto tipo "sandbox" (caja de arena) donde no hay objetivos obligatorios. Te sueltan en un mundo infinito generado proceduralmente donde todo está hecho de bloques.</p></div>
+    </div>
+</section>
+
+
+<section>
+    <p class="quote">
+        “Lo simple también puede ser profundo  
+        cuando se vive con arte.”
+    </p>
+</section>
+
+<footer>
+    Hecho Por Maci 
+</footer>
+
+<section class="final-message">
+    <h2>Un Mensaje Final</h2>
+    <p>
+        Esta página no intenta explicar quién eres,  
+        solo dejar una pequeña huella de lo que amas.
+        <br><br>
+        De la música que te acompaña cuando todo calla,  
+        de los dibujos que nacen sin permiso,  
+        de la poesía que no pide ser entendida.
+        <br><br>
+        Que nunca falte el pan con agua,  
+        ni las canciones que abrazan,  
+        ni los sueños sencillos.
+        <br><br>
+        Y si el mundo pesa…  
+        siempre habrá un lugar para descansar,  
+        cerrar los ojos  
+        y volver a empezar.
+    </p>
+</section>
+
+<script>
+
+
+
+const playlist = [
+    "Chamber Of Reflection.mp3",
+    "Joji - SLOW DANCING IN THE DARK.mp3"
+];
+
+let currentTrack = 0;
+const player = document.getElementById("musicPlayer");
+
+
+player.src = playlist[currentTrack];
+player.volume = 0.5;
+
+
+player.addEventListener("ended", () => {
+    currentTrack++;
+
+ 
+    if (currentTrack >= playlist.length) {
+        currentTrack = 0;
+    }
+
+    player.src = playlist[currentTrack];
+    player.play();
+});
+
+
+document.addEventListener("click", () => {
+    if (player.paused) {
+        player.play();
+    }
+}, { once: true });
+</script>
+
+</body>
+</html>
